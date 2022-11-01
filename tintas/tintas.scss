@@ -1,0 +1,157 @@
+$primalColor: #871616;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    padding: 0;
+}
+
+nav {
+    @include flexCenter();
+    width: 100%;
+    height: 245px;
+    background-color: $primalColor;
+    margin-bottom: 100px;
+
+    #search {
+        position: absolute;
+        left: 520px;
+        top: 31px;
+        width: 273px;
+        height: 14px;
+        background: #D9D9D9;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        outline: none;
+    }
+
+    section {
+
+        @include flexCenter();
+        margin-top: 50px;
+
+        h1 {
+            position: absolute;
+            top: 100px;
+
+        }
+
+        ul {
+
+            li {
+                margin: 0px 50px;
+                display: inline-block;
+
+                .active {
+                    background-color: #599E48;
+                    padding: 7px;
+                    border-radius: 8px;
+                }
+
+                a {
+                    color: black;
+                }
+            }
+        }
+
+    }
+
+    img {
+        position: absolute;
+        top: 31px;
+        right: 10px;
+    }
+}
+
+main {
+    @include flexCenter();
+    flex-direction: column;
+
+
+
+    .cardz {
+        @include flexCenter();
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 53px;
+
+        img {
+            max-width: 250px;
+            height: 200px
+        }
+
+        a {
+            @include flexCenter ();
+            width: 180px;
+            height: 31px;
+            color: black;
+            margin-top: 50px;
+            font-size: 40px;
+            font-weight: 600
+        }
+
+        h1 {
+            height: 120px;
+            margin-top: 20px;
+            max-width: 70%;
+            font-weight: 400;
+            font-size: 17px;
+        }
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(3, 306px);
+        grid-template-rows: 510px;
+        column-gap: 50px;
+        row-gap: 150px;
+        margin-bottom: 100px;
+
+    }
+
+    .subttle {
+        font-family: 'Faster One', cursive;
+        font-weight: 400;
+        font-size: 24px;
+        color: #001AFF;
+        margin-bottom: 100px
+    }
+
+}
+
+footer {
+    @include flexCenter();
+    background: $primalColor;
+    margin-top: 100px;
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    height: 200px;
+
+    &>* {
+        margin: 0px 60px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        li {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+    }
+}

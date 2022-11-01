@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hotwheels</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='login/login.css'>
+    <!-- LINK GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <input type="text" id="search">
+        <ul>
+            <li> <a href="quemsomos.html"> Quem Somos </a> </li>
+            <li> <a href="produtos.html">  Produtos </a> </li>
+            <li> <a href="cadastro.html"   class="active"> Cadastro </a> </li>
+            <li> <a href="login.html">     Login </a> </li>
+            <li> <a href="contato.html">   Contato </a> </li>
+        </ul>
+        <a href="index.html"> <img src="images/LOGO/Hot wheels custons 4.png">
+        <img src="images/LOGO/Hot wheels custons 4.png" height="170px"></a>
+    </nav>
+    <main>
+        <div class="itemform">
+            <h1>Apelido:</h1><input type="text">
+        </div>
+        <div class="itemform">
+            <h1>Email:</h1><input type="email">
+        </div>
+        <div class="itemform">
+            <h1>Senha:</h1><input type="text">
+        </div>
+        <div class="itemform">
+            <h1>Confirmar Senha:</h1><input type="senha">
+
+        </div>
+
+        <div class="itemform">
+            <h1>Telefone:</h1>
+            <input type="tel" oninput=mascara_telefone() placeholder="(31)99999-9999" id="telefone"
+             maxlength="14" >
+        </div>
+        <div class="itemform">
+            <h1>CPF:</h1>
+            <input type="text" oninput=cpf_mascara() placeholder="999.999.999-99" id="cpf" 
+            maxlength="14">
+        </div>
+        <div class="itemform">
+            <h1>Cep:</h1>
+            <input type="text"  oninput=cep_mascara()  placeholder="11111-111" id="cep"
+            maxlength="9">
+        </div>
+        <input type="submit" id="btnsub">
+    </main>
+    <footer>
+        <ul>
+            <li> <img src="images/icons/Group.png" height="50px"> HWCusotom </li>
+            <li> <img src="images/icons/Discord.png" height="50px"> HWCutom#0000 </li>
+        </ul>
+        <a>Email: <br> hwcutom@gmail.com </a>
+        <a>Tel: <br> (09)909-0909</a>
+    </footer>
+
+<script src="cadastro.js"></script>
+</body>
+
+</html>
